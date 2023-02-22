@@ -24,11 +24,17 @@
     <!-- The content -->
     <div class="content">
         <section class="infopanel">
-
+            <!-- Color picker -->
+            <input type="color" id="color-picker" name="color-picker" value="#000000">
+            <!-- Slider part -->
+            <label for="slider">Select a value:</label>
+            <input type="range" id="slider" name="slider" min="16" max="64" step="2" value="16">
+            <p><span id="slider-value">16</span> x <span id="slider-value">16</span> </p>
+            
         </section>
 
         <section class="grids" id="container">
-
+            <!-- js script creates the grid items -->
         </section>
     </div>
 
