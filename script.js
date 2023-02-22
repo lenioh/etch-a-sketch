@@ -1,10 +1,10 @@
 const container = document.getElementById("container");
 const slider = document.getElementById("slider");
 const valueDisplay = document.querySelectorAll("#slider-value");
-
 const colorPicker = document.getElementById("color-picker");
+const resetButton = document.getElementById("reset-button");
 
-/* Function to make 16*16 grid */
+/* Function to make x*x grid */
 function makeRows(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
@@ -16,21 +16,13 @@ function makeRows(rows, cols) {
   };
 makeRows(slider.value, slider.value);
 
-/* Add event listener to the container element */
+/* Add event listener to the container element and color it according to the sliders input */
 container.addEventListener('mouseover', function(event) {
   if (event.target.className === 'grid-item') {
     event.target.style.backgroundColor = colorPicker.value;
     event.target.id = 'hovered';
   }
 });
-/* Color picker */
-/* colorPicker.addEventListener('input', function(event) {
-    const colorValue = event.target.value;
-    const hovered = document.getElementById('hovered');
-    if (hovered) {
-      hovered.style.backgroundColor = colorValue;
-    }
-}); */
 
 /* Slider event listener */
 slider.addEventListener("input", (event) => {
@@ -40,3 +32,11 @@ slider.addEventListener("input", (event) => {
     });
     makeRows(value, value);
   });
+
+  /* Reset button to clear a canvas */
+  
+  resetButton.addEventListener("click", () => {
+    const rows = slider.value;
+    const cols = slider.value;
+    makeRows(rows, cols);
+});
