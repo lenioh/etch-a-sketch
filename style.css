@@ -19,20 +19,81 @@ body {
     margin: 0;
     padding: 0;
 }
-
+body{
+    background-color: #7acbdd;
+}
   
 #container {
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), calc(600px / var(--grid-rows)));
-    grid-template-columns: repeat(var(--grid-cols), calc(600px / var(--grid-cols)));
+    grid-template-rows: repeat(var(--grid-rows), calc(500px / var(--grid-rows)));
+    grid-template-columns: repeat(var(--grid-cols), calc(500px / var(--grid-cols)));
 }
   
 .grid-item {
     aspect-ratio: 1;
-    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #0000003e;
+}
+
+header {
+    text-align: center;
+}
+header > .title {
+    font-weight: bold;
+    font-size: 40px;
+    padding: 15px 40px;
+    margin: 15px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    padding: 15px 40px;
+    margin-top: 35px;
+    text-transform: uppercase;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-inline-start: 0;
+    height: 100%;
+}
+
+li {
     text-align: center;
 }
 
-#hovered {
-    background-color: rgb(0, 0, 0);
+#reset-button {
+    padding: 20px 35px;
+    background-color: #7acbdd;
+    border-radius: 30px;
+    height: 60px;
+}
+
+#reset-button:hover {
+    background-color: #63a5b4;
+}
+
+#color-picker {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: none;
+    outline: none;
+}
+#color-picker::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+#color-picker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
 }
