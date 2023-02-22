@@ -1,0 +1,15 @@
+/* 
+- find a great font
+- make the design 
+    - simple
+    - light colors
+    - no corners on buttons.
+    - borders will be the contrast of the light themes page, so they will be darkish
+*/
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
